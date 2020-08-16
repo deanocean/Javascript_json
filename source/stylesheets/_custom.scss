@@ -1,0 +1,16 @@
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+header {
+    height: 400px;
+    background-image: url('../images/Hero.png');
+}
+.hot {
+    top: -50px;
+}
+.card-tag {
+    bottom: 1.25rem;
+    right: 1.25rem;
+}

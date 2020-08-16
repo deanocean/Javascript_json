@@ -5,15 +5,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>六角西餐廳</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Javascript json</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="/stylesheets/all.css">
 </head>
 
 <body>
+  <header class="container-fluid bg-cover text-center py-5 d-flex flex-column justify-content-between align-items-center">
+    <h1 class="text-white mt-5">高雄旅遊資訊</h1>
+    <div class="dropdown mb-5">
+      <button class="btn btn-lg btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        -- 請選擇行政區 --
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+  </header>
+
   
 
-  <script src="/javascripts/vendor.js"></script>
+  <section class="container hot position-relative">
+    <div class="row justify-content-center">
+      <div class="col-md-8 bg-white shadow p-4 text-center">
+        <h3 class="mb-4">熱門行政區</h3>
+        <button type="button" class="btn btn-lg btn-primary mr-3">XX區</button>
+        <button type="button" class="btn btn-lg btn-danger mr-3">XX區</button>
+        <button type="button" class="btn btn-lg btn-warning mr-3">XX區</button>
+        <button type="button" class="btn btn-lg btn-info mr-3">XX區</button>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="container infoArea">
+    <h2 class="text-center my-5">XX區</h2>
+    <div class="row row-cols-1 row-cols-md-2 infoContent">
+      <div class="col mb-4">
+        <div class="card">
+          <img src="https://picsum.photos/id/1011/600/300" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h3>XX區</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><i class="text-success mr-2 fas fa-clock"></i>This is a pen. apple pen.</p>
+            <p class="card-text"><i class="text-warning mr-2 fas fa-map-marker-alt"></i>This is a pen. apple pen.</p>
+            <p class="card-text mb-0"><i class="text-primary mr-2 fas fa-mobile-alt"></i>This is a pen. apple pen.</p>
+            <p class="card-tag mb-0 position-absolute"><i class="text-warning mr-2 fas fa-tag"></i>免費參觀</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="https://picsum.photos/id/1011/600/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="https://picsum.photos/id/1011/600/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="https://picsum.photos/id/1011/600/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="my-5" aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <footer class="text-center py-4 bg-info">
+    <p class="text-white">高雄旅遊網</p>
+    <p class="text-warning">資料來源：高雄市政府</p>
+  </footer>
+
+  <script src="/js/vendor.js"></script>
+  <script src="/js/all.js"></script>
 </body>
 
 </html>
