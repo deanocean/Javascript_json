@@ -13,7 +13,40 @@ function loadData(){
         data = back.result.records;
         // console.log(data);
         showData()
+        zoneList()
     }
+}
+
+function zoneList(){
+    let arr = filterZoneList();
+    showZoneList(arr);
+}
+
+function filterZoneList(){ 
+    // 從json資料中的data[i].Zone，取出所有的行政區
+    // 加進陣列的過程要跳過重複的區域
+    let content = [];
+    for(var i = 0; i < data.length; i++){
+        // console.log(data[i].Zone)
+        let bool = content.find(function(el){ 
+            // array.find() 回傳第一個滿足條件的值，如果找不到則回傳 undefined。
+            // 如果陣列裡有該區域的話，就回傳該區域的值，找不到就會回傳undefined。
+            return data[i].Zone == el; //return 後面接著的是要判斷的條件
+        });
+        if(bool == undefined){ // 如果陣列找不到才加進去
+            content.push(data[i].Zone);
+        }
+    }
+    // console.log(content);
+    return content;
+}
+
+function showZoneList(arr){
+    let str = "";
+    for(let i = 0; i < arr.length; i++){
+        str += `<a class="dropdown-item" href="#">${arr[i]}</a>`;
+    }
+    $('header .dropdown-menu').html(str);
 }
 
 
